@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>ServerProgramming</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	</head>
+	<body>
+		<h2>Edit book</h2>
+		<div class="col-md-4">
+			<form th:object="${book}" th:action="@{~/edit/{id}(id=${book.id})}" action="#" method="post">
+			<label for="fname">Title</label>
+			<input type="text" id="fname" th:field="*{title}" class="form-control"/>
+			<div style="clear: both; display: block; height: 10px;"></div>
+			
+			<label for="fname">Author</label>
+			<input type="text" id="fname" th:field="*{author}" class="form-control"/>
+			<div style="clear: both; display: block; height: 10px;"></div>
+			
+			<label for="fname">ISBN</label>
+			<input type="text" id="fname" th:field="*{isbn}" class="form-control"/>
+			<div style="clear: both; display: block; height: 10px;"></div>
+			
+			<label for="fname">Year</label>
+			<input type="text" id="fname" th:field="*{year}" class="form-control"/>
+			<div style="clear: both; display: block; height: 10px;"></div>
+			
+			<label for="fname">Price</label>
+			<input type="text" id="fname" th:field="*{price}" class="form-control"/>
+			<div style="clear: both; display: block; height: 10px;"></div>
+			
+			<div style="clear: both; display: block; height: 10px;"></div>
+			<input type="submit" class="btn btn-primary" value="Save"></input>
+			</form>
+		</div>
+	</body>
+</html>
