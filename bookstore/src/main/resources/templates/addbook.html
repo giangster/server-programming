@@ -22,6 +22,12 @@
 			<input type="text" id="fname" th:field="*{isbn}" class="form-control"/>
 			<div style="clear: both; display: block; height: 10px;"></div>
 			
+			<label for="fname">Category</label>
+			<select th:field="*{category}">
+			    <option th:value="'Fiction'" th:text="Fiction"></option>
+			    <option th:value="'Non fiction'" th:text="Non fiction"></option>
+			</select>
+			
 			<label for="fname">Year</label>
 			<input type="text" id="fname" th:field="*{year}" class="form-control"/>
 			<div style="clear: both; display: block; height: 10px;"></div>
